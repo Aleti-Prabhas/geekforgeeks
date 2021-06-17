@@ -1,15 +1,17 @@
-
 class Solution:
     def isPerfectNumber(self, n):
-        sum = 1
-        i = 2
-        while i * i <= n:
-            if n % i == 0:
-               sum = sum + i + n/i
-            i += 1
+        list1=[6,28,496,8128,33550336,8589869056,137438691328,2305843008139952128]
+        if(n in list1):
+            return 1
+        else:
+            return 0
 
-        return (1 if sum == n and n!=1 else 0)   
-  
+   
 
 if __name__ == '__main__': 
     t = int (input ())
+    for _ in range (t):
+        N=int(input())
+        
+        ob = Solution()
+        print(ob.isPerfectNumber(N))
